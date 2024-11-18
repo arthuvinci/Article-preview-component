@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Manrope;
+    background-color: hsl(210, 46%, 95%);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#card{
+    background-color: white;
+    width: 22em;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom:10px;
+
+}
+.image img{
+    width: 100%;
+    height: 15em;
+    object-fit:cover;
+}
+.text,.bottom-bar{
+    padding: 0 40px;
+}
+.text p:nth-of-type(1){
+    font-weight: 800;
+    font-size: 17.4px;
+    color: hsl(217, 19%, 35%);
+    margin-top: 35px;
+}
+.text p:nth-of-type(2){
+    color: hsl(214, 17%, 51%);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.bottom-bar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0;
+}
+.bottom-bar img{
+    border-radius: 50%;
+    height: 40px;
+}
+.bottom-bar ul{
+    list-style: none;
+    padding:0 15px;
+    font-size: 13px;
+}
+.bottom-bar li:nth-child(1){
+    font-weight: 800;
+    color:hsl(217, 19%, 35%) ;
+}
+.bottom-bar li:nth-child(2){
+    font-weight: 500;
+    color:hsl(212, 23%, 69%) ;
+}
+.bottom-bar button{
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #c4c4c4;
+}
+
+.share-mobile{
+    background-color: hsl(217, 19%, 35%);
+    display: flex;
+    align-items: center;
+    text-transform:uppercase ;
+    height: 5.1em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: .3s ease-in-out;
+}
+.share-mobile h1{
+    font-weight: 100;
+    padding-left: 40px;
+    padding-right: 10px;
+    font-size: 15px;
+    letter-spacing:5px;
+    color: hsl(210, 46%, 95%);
+}
+.share-mobile svg{
+    padding: 0 10px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.share-mobile a {
+    -webkit-tap-highlight-color: transparent;  
+}
+.share-mobile button svg{
+    border-radius:50%;
+    padding: 8px;
+    cursor: pointer;
+    background-color: hsl(214, 17%, 51%);
+}
+.share-mobile button svg:hover{
+    background-color:hsl(216, 9%, 57%) ;
+}
+.share-mobile button{
+    position: absolute;
+    right: 34px;
+    border: none;
+    background: none;
+}
+.share-mobile.hide{
+    transform: translateY(850px);
+}
+button{
+    -webkit-tap-highlight-color: transparent;
+}
+.share-pc{
+    display: none;
+}
+
+@media (min-width:1025px) {
+
+
+    #card{
+        display: flex;
+        justify-content: center;
+        height: 16em;
+        width: 45em;
+        padding: 0;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123);
+        position: relative;
+        right: -119.5px;
+    }
+    .image img{ 
+        width: 18em;
+        height: 100%;
+    }
+    .text p:nth-of-type(1){
+        margin: 30px 10px 15px 0;
+    }
+    .text p:nth-of-type(2){
+        font-size: 13px;
+        margin: 15px 0;
+    }
+
+    .bottom-bar ul{
+        font-size: 11px;
+        line-height: 16px;
+    }
+    .share-pc{
+        display: flex;
+        align-items: center;
+        background-color: hsl(217, 19%, 35%);
+        height: 3.5em;
+        width: fit-content;
+        border-radius: 10px;
+        position: absolute;
+        padding: 0 5px 0 30px;
+        text-transform: uppercase;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.336);
+        position: relative;
+        right: 56px;
+        top: 15px;
+        transition: .2s ease-in-out;
+    }
+    .share-pc h1{
+        font-weight: 100;
+        padding-right: 10px;
+        font-size: 13px;
+        letter-spacing:5px;
+        color: hsl(210, 46%, 95%);
+    }
+    .share-pc svg{
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;  
+    }
+    .share-pc a{
+        margin-left: 15px;
+        height:20px ;
+        width:20px ;
+    }
+    .share-pc::after{
+        content:'';
+        background-color:hsl(217, 19%, 35%);
+        height: 25px;
+        width: 25px;
+        transform: rotate(45deg);
+        position: relative;
+        right: 50%;
+        top: 25px;
+    }
+    .share-pc.hide{
+        transform: scale(0);
+    }
+ 
+    
+}
